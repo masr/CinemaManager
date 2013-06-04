@@ -1,0 +1,16 @@
+<div id="film_order_area">
+  <%form_for :order,@order do |o|%>
+    <div><label>电影名称：</label><span><%=@film[:name]%></span></div>
+    <div><label>价格：</label><span><%=@film[:price]%></span></div>
+    <div><label>时间：</label><span><%=@film.datetime_str%></span></div>
+    <div><label>座位号选择：</label><span>
+        <%=o.hidden_field :member_id,:value=>session[:member_id]  %>
+        <%=o.hidden_field :film_id ,:value=>@film[:id]   %>
+        <%=o.select :seat_num,@available_seats.collect{|i| [i,i]}%>
+      </span></div>
+    <div>
+      <%=submit_tag "提交"%>
+    </div>
+  <%end%>
+</div>
+

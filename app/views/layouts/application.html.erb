@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf8" />
+    <meta name="author" content="Mao Suhan" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="robots" content="all" />
+    <title>Cinema Manager</title>
+    <script type="text/javascript" src="/javascripts/jquery-1.4.2.min.js"></script>
+    <link rel="stylesheet" href="/stylesheets/layout.css" />
+    <link rel="stylesheet" href="/stylesheets/global.css" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+
+    <link rel="Shortcut Icon" type="image/x-icon" href="http://www.csszengarden.com/favicon.ico" />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.csszengarden.com/zengarden.xml" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="banner">
+        <div id="nav">
+          <ul>
+
+            <li>
+              <a href="/">新片上映</a>
+            </li>
+            <li>
+              <a href="/member/index">我的帐户</a>
+            </li>
+            <li>
+              <a href="/admin/index">管理</a>
+            </li>
+            <li>
+              <a href="/contact/index">联系我们</a>
+            </li>
+            <div id="profile_bar">
+              <%if session[:member_id]%>
+                <span>欢迎您&nbsp;&nbsp;<%=session[:member_name]%></span>
+                <span><a href="/member/logout">退出</a></span>
+              <%else%>
+                <a href="/member/login">登录</a>
+                <a href="/member/register">注册</a>
+              <%end%>
+            </div>
+          </ul>
+
+        </div>
+      </div>
+      <div id="warning">
+        <p>
+          <%=flash[:warning]%>
+        </p>
+      </div>
+      <div id="content">
+        <%=yield%>
+
+      </div>
+      <div class="clear"></div>
+    </div>
+  </body>
+</html>

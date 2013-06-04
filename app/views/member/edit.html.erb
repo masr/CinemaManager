@@ -1,0 +1,26 @@
+<div id="edit_member_area" class="content_column">
+  <%form_for :member,@member do |m|%>
+    <div>
+      <%=m.label :name,"会员名"%><%=m.text_field :name%>
+    </div>
+    <div>
+      <%=m.label :sex,"性别"%><%=m.select :sex,[["男",1],["女",0]]%>
+    </div>
+    <div>
+      <%=m.label :description,"自我介绍"%>
+  <br/>
+  <%=m.text_area :description,:rows=>10,:cols=>40%>
+    </div>
+    <div>
+      <%=m.label :age,"年龄"%><%=m.text_field :age%>
+    </div>
+    <div>
+      <%=m.label :age,"联系地址"%><%=m.text_field :address%>
+    </div>
+    <div>
+      <%=submit_tag '提交'%>
+    </div>
+
+<%end%>
+
+  </div>

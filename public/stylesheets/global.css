@@ -1,0 +1,83 @@
+
+html {
+    background: #89b6f9;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+    text-align: left;
+}
+
+body {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 13px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", Arial, "微软雅黑", "宋体", sans-serif;
+    color: #ffffff;
+}
+
+
+/*********************************global links style*********************************/
+
+a:link {
+    font-weight: bold;
+    text-decoration: none;
+    color: #dfce3b;
+}
+
+a:visited {
+    font-weight: bold;
+    text-decoration: none;
+    color: #2262a4;
+}
+
+a:hover, a:active {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+form input,form select{
+    margin:10px 5px 10px 5px
+}
+
+
+
+.film {
+    padding: 20px 0 0 20px;
+}
+
+a.film_img_link {
+    display: block;
+    width: 140px;
+    float: left;
+}
+
+a.film_img_link img {
+    width: 140px;
+
+}
+
+.film .film_intro {
+    float: left;
+    width: 315px;
+    margin-left: 30px;
+    font-size: 15px;
+}
+
+
+
+.film h4 {
+    font-size: 20px;
+    color: #e4eefe;
+    text-decoration: none;
+    text-align: left;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    letter-spacing: .5px;
+    height: 28px;
+    text-indent: 5px;
+    border-bottom: 1px dotted white;
+    margin-bottom: 10px;
+}

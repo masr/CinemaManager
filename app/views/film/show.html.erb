@@ -1,0 +1,22 @@
+<style type="text/css">
+  #show_film_area img{
+    width:200px;
+  }
+  a.order_link{
+  font-size:23px;
+  color:blue;
+  display: block;
+  margin:10px 0 0 20px;
+  }
+</style>
+
+<div id="show_film_area">
+  <h3><%=@film[:name]%></h3>
+  <div><img src="/upload/film_pic/<%=@film[:pic_name]%>" alt="海报"></img></div>
+  <div><label>价钱：</label><span><%=@film[:price]%></span></div>
+  <div><label>总座位数：</label><span><%=@film[:full_seats]%></span></div>
+  <div><label>剩余座位数：</label><span><%=@film[:seats_remain]%></span></div>
+  <div><label>描述：</label><span><%=@film[:description]%></span></div>
+  <div><label>时间：</label><span><%=@film.datetime_str%></span></div>
+  <div><a class="order_link" href="/film/order/<%=@film[:id]%>">订购</a></div>
+</div>

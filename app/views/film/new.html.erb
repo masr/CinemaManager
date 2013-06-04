@@ -1,0 +1,33 @@
+<div id="film_new_area" class="content_column">
+  
+  <% form_for :film,@film do |f| %>
+    <div>
+      <%=f.label :name,"影名"%>
+      <%=f.text_field :name%>
+    </div>
+    <div>
+      <%=f.label :pic_name,"海报图片名称"%>
+      <%=f.text_field :pic_name%>
+    </div>
+    <div>
+      <%=f.label :price,"价钱"%>
+      <%=f.text_field :price%>
+    </div>
+      <div>
+      <%=f.label :full_seats,"座位数"%>
+      <%=f.text_field :full_seats%>
+    </div> <div>
+      <%=f.label :description,"简介"%>
+      <br/>
+      <%=f.text_area :description,:cols=>40,:rows=>10%>
+    </div>
+    <div>
+      <%=label_tag "日期"%>
+      <%= datetime_select :datetime,:datetime %>
+    </div>
+    <div>
+      <%=f.submit "提交" %>
+    </div>
+
+  <%end%>
+</div>

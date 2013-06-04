@@ -1,0 +1,18 @@
+<div id="member_film_order_area">
+  <%@orders.each do |order|%>
+    <div class="film">
+      <h4><%=order[:film][:name]%></h4>
+      <a class="film_img_link" href="/film/show/<%=order[:film][:id]%>"><img src="/upload/film_pic/<%=order[:film][:pic_name]%>" /></a>
+      <div class="film_intro">
+        <p><%=order[:film][:description]%>
+        </p>
+        您已预订了<%=order[:count]%>张票，座位号为
+        <%order[:seats].each do |t|%>
+       <%=t%>,
+       <%end%>
+    </div>
+      <div class="clear">
+      </div>
+    </div>
+  <%end%>
+</div>

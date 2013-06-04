@@ -1,0 +1,139 @@
+
+
+#container {
+    background: url(../images/repeater.jpg) repeat-y top left;
+    width: 880px;
+    margin: 0 auto;
+}
+
+
+/********************************* header *********************************/
+#banner {
+    margin-bottom: 20px;
+    background: url(../images/head2.jpg) no-repeat 22px;
+    height: 340px;
+}
+
+#nav {
+    width: 100%;
+    text-align: center;
+    height: 80px;
+    padding-top:10px;
+}
+
+#nav ul {
+    width: 640px;
+    margin: 0 auto;
+}
+
+#nav li {
+    float: left;
+    list-style: none;
+    font-size: 15px;
+    width: 90px;
+    line-height: 57px;
+    height:57px;
+}
+
+#nav a {
+    color: #defde5;
+}
+
+#nav li:hover {
+    background: #668fd1;
+}
+
+#profile_bar{
+    margin:18px 0 0 100px;
+    float:left;
+}
+
+
+/*********************************content*********************************/
+#content {
+    padding-left: 50px;
+    margin-bottom: 40px;
+    min-height: 600px;
+    width: 530px;
+    float: left;
+    color:black;
+}
+
+.content_column {
+    margin-bottom: 20px;
+    padding:10px 10px 10px 20px;
+}
+
+#content h3 {
+    font-size: 23px;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: left;
+    margin: 0px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    letter-spacing: .5px;
+    height: 40px;
+    text-indent: 5px;
+    background-color: #538658;
+}
+
+
+
+
+/*********************************index sidebar*********************************/
+#sidebar {
+    float: left;
+    background: transparent;
+    padding: 0;
+    margin-left: 20px;
+    width: 265px; /*up to 210*/
+    font-size: 13px;
+}
+
+#sidebar h3.select {
+    width: 285px;
+    background: transparent no-repeat url(../images/designs.jpg) top center;
+    text-align: center;
+    border-bottom-style: none;
+    margin-right: 0px;
+    margin-left: 0px;
+    height: 53px;
+    text-indent: -10000px;
+}
+
+#sidebar li {
+    background-color: #628f13;
+    display: block;
+    border-bottom: 2px #4f740e dotted;
+    padding: 10px 0px 8px 5px;
+    width: 240px;
+    line-height: 15px;
+    border-top: 2px dotted #4f740e;
+    margin-top: 0px;
+    margin-bottom: 8px;
+    color: #172104;
+    text-align: left;
+}
+
+#sidebar li:hover {
+    background-color: #668fd1;
+    border-bottom-color: #5475ab;
+    border-top-color: #5475ab;
+    color: #345082;
+}
+
+#sidebar li a:link {
+    color: #dfce3b;
+    text-decoration: none;
+}
+
+#sidebar li a:link:hover {
+    color: #fff4ee;
+    text-decoration: none;
+}
+
+#sidebar li a:visited {
+    color: #2262a4;
+    text-decoration: none;
+}

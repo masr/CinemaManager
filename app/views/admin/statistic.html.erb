@@ -1,0 +1,27 @@
+<div id="admin_statistic_area" class="content_column">
+  <table id="member_table">
+    <tr><th>姓名</th><th>点数</th><th>注册日期</th><th>电影票预定数</th><th>性别</th><th>年龄</th><th>地址</th><th>状态</th></tr>
+    <%@members.each do|t|%>
+      <tr>
+        <td><%=t[:name]%></td>
+        <td><%=t[:point]%></td>
+        <td><%=t[:created_at].strftime("%x %Y")%></td>
+        <td><%=t[:order_film_count]%></td>
+        <td><%=t[:sex]==0?"女":"男"%></td>
+        <td><%=t[:age]%></td>
+        <td><%=t[:address]%></td>
+        <td><a class="toggle_status"  href="/member/toggle_status/<%=t[:id]%>"><%=t[:status]==0?"激活":"关闭"%></a></td>
+        </tr>
+    <%end%>
+  </table>
+</div>
+<script type="text/javascript">
+  $(function(){
+    $(".toggle_status").click(function(){
+       $.get(this.href,function(s){
+         $(".toggle_status").text(1==parseInt(s)?"关闭":"激活");
+       })
+       return false;
+    });
+  })
+</script>

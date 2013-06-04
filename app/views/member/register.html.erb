@@ -1,0 +1,43 @@
+<div id="register_area" class="content_column">
+  <%form_for :member,:html=>{:id=>"register_form"} do |m|%>
+    <div>
+      <%=m.label :name,"会员名"%><%=m.text_field :name%>
+    </div>
+    <div>
+      <%=m.label :password,"密码"%><%=m.password_field :password,:id=>"password"%>
+    </div>
+    <div>
+      <label>确认密码</label><input type="password" id="password_again"></input>
+    </div>  <div>
+      <%=m.label :point,"冲值"%><%=m.text_field :point%>
+    </div>
+    <div>
+      <%=m.label :sex,"性别"%><%=m.select :sex,[["男",1],["女",0]]%>
+    </div>
+    <div>
+      <%=m.label :description,"自我介绍"%>
+      <br/>
+      <%=m.text_area :description,:rows=>10,:cols=>40%>
+    </div>
+    <div>
+      <%=m.label :age,"年龄"%><%=m.text_field :age%>
+    </div>
+    <div>
+      <%=m.label :address,"联系地址"%><%=m.text_field :address%>
+    </div>
+    <div>
+      <%=submit_tag '提交'%>
+    </div>
+  <%end%>
+</div>
+<script type="text/javascript">
+  $(function(){
+    $("#register_form").submit(function(){
+      if($("#password").val()!=$("#password_again").val()){
+        alert("两次密码不一致！");
+        return false;
+      }
+      return true;
+    })
+  })
+</script>

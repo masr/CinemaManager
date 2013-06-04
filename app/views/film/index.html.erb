@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="/stylesheets/index.css"/>
+<div id="film_index_area">
+  <%@films.each do |film|%>
+    <div class="film">
+      <h4><%=film[:name]%></h4>
+      <a class="film_img_link" href="/film/show/<%=film[:id]%>"><img src="/upload/film_pic/<%=film[:pic_name]%>" /></a>
+      <p class="film_intro">
+        <%=film[:description]%>                            　
+      </p>
+      <div class="clear">
+      </div>
+    </div>
+  <%end%>
+</div>
